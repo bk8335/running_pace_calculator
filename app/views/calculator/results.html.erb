@@ -1,2 +1,8 @@
-<p>So you want to run <%= @distance %>km in <%= @hours%> hours, <%= @minutes %> minutes, and <%= @seconds %> seconds eh?</p>
-<h2>Then set your treadmill to <%= @pace %>km/h to hit it - good luck!</h2>
+<p>So you want to run <%= @distance %>km in <%= @hours%> hours, <%= @minutes %> minutes and <%= @seconds %> seconds eh?</p>
+<% if @incline > 0 %>
+	<p>At an incline of <%= @incline %>% - you will also run up an elevation of <%= @elevation.to_i %> metres! </p>
+<% end %>
+<h2>Then set your treadmill to <%= @pace_hour %>km/h to hit it - good luck!</h2>
+<p>That's an average pace of <%= @pace_km_min %>:<%= @pace_km_sec.to_i%> per km</p>
+
+<%= link_to 'Calculate again', :back %>
