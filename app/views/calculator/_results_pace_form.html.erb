@@ -1,0 +1,15 @@
+<form action="results">
+	Target distance (km): <input type="number" name="distance" value="<%= @distance %>", step="0.1", min="0">
+	<br>
+	<br>
+	Target time:
+	<br>Hours <input type="number" name="hours" value="<%= @hours %>", min="0">
+	Minutes <input type="number" name="minutes" value="<%= @minutes %>", min="0">
+	Seconds <input type="number" name="seconds" value="<%= @seconds %>", min="0">
+	<br>
+	<br>
+	Incline: <input type="number" name="incline" value="<%= @incline %>", step="0.5", min="0">%
+	<br>
+	<br>
+	<input type="submit" value="Calculate">
+</form>
