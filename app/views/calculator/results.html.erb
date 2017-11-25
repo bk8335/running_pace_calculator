@@ -2,7 +2,7 @@
 
 <% if @units == "miles" %>
 	<h2>Then set your treadmill to <%= @pace_hour_mph %>mph to hit it - good luck!</h2>
-	<p>That's an average pace of <%= @pace_mile_min %>:<%= @pace_mile_sec.to_i%> per mile</p>
+	<p>That's an average pace of <%= @pace_mile_min %>:<%= @pace_mile_sec%> per mile</p>
 
 	<% if @incline > 0 %>
 		<p>At an incline of <%= @incline %>% - you will also run up an elevation of <%= @elevation_feet.to_i %> feet! </p>

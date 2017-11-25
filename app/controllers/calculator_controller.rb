@@ -6,7 +6,7 @@ class CalculatorController < ApplicationController
   end
 
   def results
-  	# debugger
+  	
   	@distance = params[:distance].to_d
   	@hours = params[:hours].to_i
   	@minutes = params[:minutes].to_i
@@ -23,19 +23,19 @@ class CalculatorController < ApplicationController
   	@pace_hour_mph = (@pace_hour * 0.621371).ceil(1)
   	
   	@elevation_metres = ( @incline / 100 ) * @distance * 1000
+  	@elevation_feet = @elevation_metres * 3.28084
   	@pace_km_min = (60 / @pace_hour).floor
   	@pace_km_sec = (((60 / @pace_hour) - @pace_km_min ) * 60).floor
 
-  	if @pace_km_sec == 0
-  		@pace_km_sec = "00"
+  	if @pace_km_sec < 10
+  		@pace_km_sec = "0" + @pace_km_sec.to_s 
   	end
 
   	@pace_mile_min = (60 / @pace_hour_mph).floor
   	@pace_mile_sec = (((60 / @pace_hour_mph) - @pace_mile_min ) * 60).floor
 
-  	if @pace_mile_sec == 0
-  		@pace_mile_sec = "00"
+  	if @pace_mile_sec < 10
+  		@pace_mile_sec = "0" + @pace_mile_sec.to_s
   	end
-
   end
 end
