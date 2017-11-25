@@ -1,5 +1,9 @@
 <form action="results">
-	Target distance (km): <input type="number" name="distance" value="<%= @distance %>", step="0.1", min="0">
+	Target distance: <input type="number" name="distance" value="<%= @distance %>", step="0.1", min="0">
+	<select class="form-control" name="units", value="<%= @units %>">
+		<option>km</option>
+		<option>miles</option>
+	</select>
 	<br>
 	<br>
 	Target time:

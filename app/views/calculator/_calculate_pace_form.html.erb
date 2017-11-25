@@ -1,11 +1,10 @@
 <form action="calculator/results">
-	Units:
 	<br>
-	<input type="radio" name="units" value="metric">Metric</input>
-	<input type="radio" name="units" value="imperial">Imperial</input>
-	<br>
-	<br>
-	Target distance (km): <input type="number" name="distance" value="10", step="0.1", min="0">
+	Target distance: <input type="number" name="distance" value="10", step="0.1", min="0">
+	<select class="form-control" name="units">
+		<option>km</option>
+		<option>miles</option>
+	</select>
 	<br>
 	<br>
 	Target time:
