@@ -1,3 +1,5 @@
+<h1>Running pace calculator</h1>
+<h2>Convert your running targets into average speed for the treadmill</h2>
 
 <div class="center jumbotron">
 <% if @units == "miles" %>
@@ -18,9 +20,7 @@
 	<% end %>
 <% end %>
 </div>
-	
-
-<%= link_to 'Back', :back %>
+<%= link_to 'Back', :back, {:style=>'font-size: 14px;'} %>
 <hr>
 <div class="center jumbotron">
 <%= render 'results_pace_form' %>
