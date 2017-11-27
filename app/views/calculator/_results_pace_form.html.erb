@@ -1,18 +1,25 @@
 <form action="results">
-	Target distance: <input type="number" name="distance" value="<%= @distance %>", step="0.1", min="0">
-	<select class="form-control" name="units", value="<%= @units %>">
-		<option>km</option>
-		<option>miles</option>
-	</select>
 	<br>
+	<div class="form-inline">
+		<strong>Target distance:</strong>
+		<br>
+		<input type="number" name="distance" value="<%= @distance %>", step="0.1", min="0">
+		<select class="form-control" name="units", value="<%= @units %>">
+			<option>km</option>
+			<option>miles</option>
+		</select>
+	</div>
 	<br>
-	Target time:
-	<br>Hours <input type="number" name="hours" value="<%= @hours %>", min="0">
+	<strong>Target time:</strong>
+	<br>
+	Hours <input type="number" name="hours" value="<%= @hours %>", min="0">
 	Minutes <input type="number" name="minutes" value="<%= @minutes %>", min="0">
 	Seconds <input type="number" name="seconds" value="<%= @seconds %>", min="0">
 	<br>
 	<br>
-	Incline: <input type="number" name="incline" value="<%= @incline %>", step="0.5", min="0">%
+	<Strong>Incline:</Strong>
+	<br>
+	<input type="number" name="incline" value="<%= @incline %>", step="0.5", min="0">%
 	<br>
 	<br>
 	<input type="submit" value="Calculate">
