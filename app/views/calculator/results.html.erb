@@ -1,15 +1,15 @@
 <div class="center jumbotron">
 <% if @units == "miles" %>
-<p>So you want to run <%= (@distance / 1.60934).round(1) %> miles in <%= @hours%> hours, <%= @minutes %> minutes and <%= @seconds %> seconds eh?</p>
-	<p><strong>Then set your treadmill to <%= @pace_hour_mph %>mph to hit it - good luck!</strong></p>
+<p>To run <%= (@distance / 1.60934).round(1) %> miles in <%= @hours%> hours, <%= @minutes %> minutes and <%= @seconds %> seconds</p>
+	<p><strong>Set your treadmill to <%= @pace_hour_mph %>mph to hit it - good luck!</strong></p>
 	<p>That's an average pace of <%= @pace_mile_min %>:<%= @pace_mile_sec%> per mile</p>
 
 	<% if @incline > 0 %>
 		<p>At an incline of <%= @incline %>% - you will also run up an elevation of <%= @elevation_feet.to_i %> feet! </p>
 	<% end %>
 <% else %>
-<p>So you want to run <%= @distance %>km in <%= @hours%> hours, <%= @minutes %> minutes and <%= @seconds %> seconds eh?</p>
-	<p><strong>Then set your treadmill to <%= @pace_hour %>km/h to hit it - good luck!</strong></p>
+<p>To run <%= @distance %>km in <%= @hours%> hours, <%= @minutes %> minutes and <%= @seconds %> seconds</p>
+	<p><strong>Set your treadmill to <%= @pace_hour %>km/h to hit it - good luck!</strong></p>
 	<p>That's an average pace of <%= @pace_km_min %>:<%= @pace_km_sec	%> per km</p>
 
 	<% if @incline > 0 %>
