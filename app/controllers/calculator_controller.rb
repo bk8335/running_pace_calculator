@@ -19,8 +19,8 @@ class CalculatorController < ApplicationController
   	end 
 
   	@time_in_secs = (@hours * 3600) + (@minutes * 60) + @seconds
-  	@pace_hour = ((@distance.to_d / @time_in_secs) * 3600).ceil(1)
-  	@pace_hour_mph = (@pace_hour * 0.621371).ceil(1)
+  	@pace_hour = ((@distance.to_d / @time_in_secs) * 3600).round(2).ceil(1)
+  	@pace_hour_mph = (@pace_hour * 0.621371).round(2).ceil(1)
   	
   	@elevation_metres = ( @incline / 100 ) * @distance * 1000
   	@elevation_feet = @elevation_metres * 3.28084
